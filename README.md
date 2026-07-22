@@ -168,13 +168,3 @@ register_error_code(ErrorCode.SERVICE_ERROR, NetworkError)
 raise_for_error(ErrorCode.SERVICE_ERROR, error_msg="网络连接失败")
 ```
 
-## 技术架构
-
-```
-excode/
-├── __init__.py       # 包入口，统一导出所有公开 API
-├── codes.py          # ErrorCode 枚举、错误码描述映射
-├── exceptions.py     # 异常类定义（继承体系）
-└── handler.py        # raise_for_error 工厂函数、register_error_code 注册函数
-```
-
